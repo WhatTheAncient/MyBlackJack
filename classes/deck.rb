@@ -1,6 +1,7 @@
 # frozen_string_literal: true
 
 class Deck
+
   def initialize
     @cards = []
     SUITS.each { |suit| VALUES.each { |value| @cards << Card.new(value, suit) } }
