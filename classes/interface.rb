@@ -34,8 +34,17 @@ class Interface
 
   def show_hands
     puts 'Dealer hand: (*)  (*)'
-    puts player.show_hand
+    puts show_user_hand
   end
+
+  def show_user_hand
+    hand_string = ''
+    player.hand.each do |card|
+      hand_string += card.value + card.suit + ' '
+    end
+    "#{player.name}'s hand: #{hand_string}, score: #{player.score}"
+  end
+
 
   def show_user_choices
     puts 'Choose what you want to do: '

@@ -20,19 +20,11 @@ class Player
     self.hand = []
   end
 
-  def show_hand
-    hand_string = ''
-    hand.each do |card|
-      hand_string += card.value + card.suit + ' '
-    end
-    "#{self.name}'s hand: #{hand_string}, score: #{self.score}"
-  end
-
   private
 
   attr_writer :hand, :score
 
-  def score_hand()
+  def score_hand
     self.score = 0
     self.hand.each do |card|
       self.score += if card.value.to_i != 0
