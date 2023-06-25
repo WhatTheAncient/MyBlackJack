@@ -6,6 +6,6 @@ class Dealer < Player
   end
 
   def take_card(deck, count = 1)
-    super if score <= 17
+    super if @score <= 17
   end
 end

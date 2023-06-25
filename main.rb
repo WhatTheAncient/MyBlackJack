@@ -1,9 +1,10 @@
-require_relative 'classes/card'
-require_relative 'classes/deck'
-require_relative 'classes/player'
-require_relative 'classes/dealer'
-require_relative 'classes/game'
-require_relative 'classes/interface'
+require_relative 'lib/card'
+require_relative 'lib/deck'
+require_relative 'lib/player'
+require_relative 'lib/dealer'
+require_relative 'lib/game'
+require_relative 'lib/interface'
 
 interface = Interface.new
-interface.start_game
+
+interface.start_game_session

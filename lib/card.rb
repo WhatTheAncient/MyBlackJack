@@ -6,11 +6,22 @@ class Card
   def initialize(value, suit)
     @value = value
     @suit = suit
-    @score = 0
   end
 
   def to_s
     value + suit
   end
 
+  def score
+    @score ||= begin
+      return 11 if ace?
+      return 10 if value.to_i == 0
+
+      value.to_i
+    end
+  end
+
+  def ace?
+    value == 'A'
+  end
 end
